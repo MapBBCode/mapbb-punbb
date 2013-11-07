@@ -4,7 +4,7 @@
 <extension engine="1.0">
 	<id>mapbbcode</id>
 	<title>MapBBCode</title>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<description>Maps for your forum: adds [map] bbcode, editor button and MapBBCode Share integration.</description>
 	<author>Ilya Zverev</author>
 
@@ -105,6 +105,14 @@
 				$text = $cur_post['message'];
 				if( preg_match('#\[map(=[0-9,.-]+)?\].*?\[/map\]|\[mapid\][a-z]+\[/mapid\]#', $text) )
 					$mapbbcode_present = true;
+			}
+		]]></hook>
+		<hook id="se_results_pre_header_load"><![CDATA[
+			if( $show_as == 'posts' ) {
+				foreach( $search_set as $cur_set ) {
+					if( preg_match('#\[map(=[0-9,.-]+)?\].*?\[/map\]|\[mapid\][a-z]+\[/mapid\]#', $cur_set['message']) )
+						$mapbbcode_present = true;
+				}
 			}
 		]]></hook>
 		<hook id="ed_pre_header_load"><![CDATA[ // 1.4
