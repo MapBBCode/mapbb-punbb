@@ -4,7 +4,7 @@
 <extension engine="1.0">
 	<id>mapbbcode</id>
 	<title>MapBBCode</title>
-	<version>1.0.1</version>
+	<version>1.1.0</version>
 	<description>Maps for your forum: adds [map] bbcode, editor button and MapBBCode Share integration.</description>
 	<author>Ilya Zverev</author>
 
@@ -365,7 +365,7 @@ MAPBBCODE;
 							<div class="sf-set set<?php echo ++$forum_page['item_count'] ?>" style="display: none;" id="bing_key_row">
 								<div class="sf-box text">
 									<label for="fld<?php echo ++$forum_page['fld_count'] ?>"><span id="bing_key_title"></span></label><br />
-									<span class="fld-input" id="bing_key"><input type="text" size="50" maxlength="120" id="bing_key" /></span>
+									<span class="fld-input"><input type="text" size="50" maxlength="120" id="bing_key" /></span>
 								</div>
 							</div>
 							<div id="panel_config"></div>

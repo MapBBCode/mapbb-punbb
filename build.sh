@@ -1,7 +1,14 @@
 #!/bin/sh
+DISTFILE=mapbbcode-latest.zip
 TARGET=dist/mapbbcode_punbb.zip
 DIR=mapbbcode
 MAPBBCODE=js
+
+wget -nv http://mapbbcode.org/dist/$DISTFILE
+unzip -q $DISTFILE
+rm $DISTFILE
+mv mapbbcode $MAPBBCODE
+
 mkdir $DIR
 cp manifest.xml $DIR
 cp map.gif $DIR
@@ -17,20 +24,11 @@ for LANG in lang/* ; do
 	cp $DIR/index.html $LANGDIR
 done
 
-if [ ! -e $MAPBBCODE ]; then
-git clone https://github.com/MapBBCode/mapbbcode.git $MAPBBCODE
-fi
-cd $MAPBBCODE
-git pull origin master
-cd ..
-
 mkdir $DIR/js
-cp -r $MAPBBCODE/dist/lib/* $DIR/js
-cp $MAPBBCODE/dist/mapbbcode.js $DIR/js
-cp $MAPBBCODE/dist/mapbbcode-config.js $DIR/js
-cp $MAPBBCODE/dist/mapbbcode-window.html $DIR/js
-mkdir $DIR/js/lang
-cp $MAPBBCODE/src/strings/* $DIR/js/lang
-rm $TARGET
+cp -r $MAPBBCODE/* $DIR/js/
+rm -r $MAPBBCODE
+
+cp leaflet.css $DIR/js
+rm -f $TARGET
 zip -qr $TARGET $DIR
 rm -r $DIR
