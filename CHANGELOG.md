@@ -1,5 +1,10 @@
 # Changes to MapBBCode Extension
 
+### 1.1.2 (2013-11-14)
+
+* A hook for adding initialization javascript.
+* Proprietary layers extension.
+
 ### 1.1.1 (2013-11-13)
 
 * Bing layer was added too soon and did not appear in the list.
