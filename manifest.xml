@@ -4,7 +4,7 @@
 <extension engine="1.0">
 	<id>mapbbcode</id>
 	<title>MapBBCode</title>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 	<description>Maps for your forum: adds [map] bbcode, editor button and MapBBCode Share integration.</description>
 	<author>Ilya Zverev</author>
 
@@ -140,9 +140,9 @@
 <![endif]-->
 <script src="$libpath/leaflet.js"></script>
 <script src="$libpath/leaflet.draw.js"></script>
-<script src="$libpath/proprietary/Bing.js"></script>
 <script src="$libpath/mapbbcode.js"></script>
 <script src="$libpath/mapbbcode-config.js"></script>
+<script src="$libpath/proprietary/Bing.js"></script>
 <script src="$libpath/lang/$lang.js"></script>
 <style>
 	.brd .ct-box .leaflet-container div {
@@ -411,8 +411,8 @@ MAPBBCODE;
 	<link rel="stylesheet" href="<?php echo $mapbb_libpath ?>/leaflet.ie.css" />
 <![endif]-->
 <script src="<?php echo $mapbb_libpath ?>/leaflet.js"></script>
-<script src="<?php echo $mapbb_libpath ?>/proprietary/Bing.js"></script>
 <script src="<?php echo $mapbb_libpath ?>/mapbbcode-config.js"></script>
+<script src="<?php echo $mapbb_libpath ?>/proprietary/Bing.js"></script>
 <script src="<?php echo $mapbb_libpath ?>/lang/<?php echo $mapbb_lang ?>.Config.js"></script>
 
 <script language="javascript" type="text/javascript">
