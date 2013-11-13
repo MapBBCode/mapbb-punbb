@@ -140,7 +140,7 @@
 <![endif]-->
 <script src="$libpath/leaflet.js"></script>
 <script src="$libpath/leaflet.draw.js"></script>
-<script src="$libpath/Bing.js"></script>
+<script src="$libpath/proprietary/Bing.js"></script>
 <script src="$libpath/mapbbcode.js"></script>
 <script src="$libpath/mapbbcode-config.js"></script>
 <script src="$libpath/lang/$lang.js"></script>
@@ -411,7 +411,7 @@ MAPBBCODE;
 	<link rel="stylesheet" href="<?php echo $mapbb_libpath ?>/leaflet.ie.css" />
 <![endif]-->
 <script src="<?php echo $mapbb_libpath ?>/leaflet.js"></script>
-<script src="<?php echo $mapbb_libpath ?>/Bing.js"></script>
+<script src="<?php echo $mapbb_libpath ?>/proprietary/Bing.js"></script>
 <script src="<?php echo $mapbb_libpath ?>/mapbbcode-config.js"></script>
 <script src="<?php echo $mapbb_libpath ?>/lang/<?php echo $mapbb_lang ?>.Config.js"></script>
 
