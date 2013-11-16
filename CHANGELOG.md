@@ -1,5 +1,9 @@
 # Changes to MapBBCode Extension
 
+### 1.1.3 (2013-11-16)
+
+* Updated MapBBCode to 1.1.1.
+
 ### 1.1.2 (2013-11-14)
 
 * A hook for adding initialization javascript.
