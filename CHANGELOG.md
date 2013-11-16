@@ -2,6 +2,7 @@
 
 ### 1.1.3 (2013-11-16)
 
+* Broken editor window in previous version.
 * Updated MapBBCode to 1.1.1.
 
 ### 1.1.2 (2013-11-14)

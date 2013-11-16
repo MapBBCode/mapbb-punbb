@@ -154,7 +154,7 @@ $proprietary
 <script language="Javascript" type="text/javascript">
 <!--
 var mapBBcode = new MapBBCode({
-	windowPath: '$libpath/',
+	windowPath: '$mapbb_libpath/',
 	layers: '{$forum_config['o_pun_mapbbcode_layers']}',
 	defaultZoom: {$forum_config['o_pun_mapbbcode_default_zoom']},
 	defaultPosition: [{$forum_config['o_pun_mapbbcode_default_pos']}],
