@@ -1,5 +1,12 @@
 # Changes to MapBBCode Extension
 
+### 1.1.4 (2013-11-29)
+
+# Updated MapBBCode to 1.1.2.
+# Fixed language regression.
+# Link to administrator's guide.
+# Proprietary plugin now updates mapbbcode-window.html.
+
 ### 1.1.3 (2013-11-16)
 
 * Broken editor window in previous version.

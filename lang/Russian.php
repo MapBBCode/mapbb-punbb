@@ -5,6 +5,7 @@ if (!defined('FORUM')) die();
 $lang_pun_mapbbcode = array(
 	'MapBBCode head' => 'Настройка MapBBCode',
 	'MapBBCode legend' => 'Параметры',
+	'MapBBCode config intro' => 'Для справки по настройке и расширению модуля MapBBCode обратитесь к <a href="http://mapbbcode.org/ru/admin.html">руководству администратора</a>. Чтобы пополнить список слоёв и расширить функциональность модуля, установите модуль "mapbbcode_proprietary".',
 	'Enable external' => 'Внешние карты',
 	'Enable external label' => 'Разрешить вставку и загрузку карт на MapBBCode Share',
 	'Share server label' => 'Сервер MapBBCode Share',

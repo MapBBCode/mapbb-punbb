@@ -5,6 +5,7 @@ if (!defined('FORUM')) die();
 $lang_pun_mapbbcode = array(
 	'MapBBCode head' => 'MapBBCode Configuration',
 	'MapBBCode legend' => 'Configuration',
+	'MapBBCode config intro' => 'For information on configuring and extending MapBBCode, see <a href="http://mapbbcode.org/admin.html">Administrator\'s Guide</a>. For additional layers and add-ons install "mapbbcode_proprietary" plugin.',
 	'Enable external' => 'Enable sharing',
 	'Enable external label' => 'Enable including and uploading maps to MapBBCode Share',
 	'Share server label' => 'MapBBCode Share URL',
