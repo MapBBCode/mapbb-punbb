@@ -20,8 +20,8 @@
 				// copy-paste from "pun_mapbbcode_js_proprietary" hook
 				$propr = '';
 				$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Esri.js"></script>';
-				$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Google.js"></script>';
-				$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Yandex.js"></script>';
+				//$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Google.js"></script>';
+				//$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Yandex.js"></script>';
 				$propr .= '<script src="'.$mapbb_libpath.'/Handler.Length.js"></script>';
 				// end copy-paste
 				$propr = "<!-- proprietary start -->".str_replace('"_/', '"', $propr)."<!-- proprietary end -->\n";
@@ -45,8 +45,8 @@
 		<hook id="pun_mapbbcode_js_proprietary"><![CDATA[
 			$propr = '';
 			$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Esri.js"></script>';
-			$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Google.js"></script>';
-			$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Yandex.js"></script>';
+			//$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Google.js"></script>';
+			//$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Yandex.js"></script>';
 			$propr .= '<script src="'.$mapbb_libpath.'/Handler.Length.js"></script>';
 			return $propr;
 		]]></hook>
