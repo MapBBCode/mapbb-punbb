@@ -4,7 +4,7 @@
 <extension engine="1.0">
 	<id>mapbbcode</id>
 	<title>MapBBCode</title>
-	<version>1.1.4</version>
+	<version>1.2.0</version>
 	<description>Maps for your forum: adds [map] bbcode, editor button and MapBBCode Share integration.</description>
 	<author>Ilya Zverev</author>
 
@@ -130,20 +130,15 @@
 				$ssw = $forum_config['o_pun_mapbbcode_standard_switcher'] ? 'true' : 'false';
 
 				$mapbb_libpath = $ext_info['url'].'/js';
-				$mapbb_lang = file_exists($ext_info['path'].'/js/lang/'.$forum_user['language'].'.js') ? $forum_user['language'] : 'English';
+				$mapbb_lang = file_exists($ext_info['path'].'/js/lang/'.$lang_common['lang_identifier'].'.js') ? $lang_common['lang_identifier'] : 'en';
 				$proprietary = ($hook = get_hook('pun_mapbbcode_js_proprietary')) ? eval($hook) : '';
 				$forum_head['mapbbcode'] = <<<MAPBBCODE
 <link rel="stylesheet" href="$mapbb_libpath/leaflet.css" />
 <link rel="stylesheet" href="$mapbb_libpath/leaflet.draw.css" />
-<!--[if lte IE 8]>
-	<link rel="stylesheet" href="$mapbb_libpath/leaflet.ie.css" />
-	<link rel="stylesheet" href="$mapbb_libpath/leaflet.draw.ie.css" />
-<![endif]-->
 <script src="$mapbb_libpath/leaflet.js"></script>
 <script src="$mapbb_libpath/leaflet.draw.js"></script>
 <script src="$mapbb_libpath/mapbbcode.js"></script>
-<script src="$mapbb_libpath/mapbbcode-config.js"></script>
-<script src="$mapbb_libpath/proprietary/Bing.js"></script>
+<script src="$mapbb_libpath/LayerList.js"></script>
 $proprietary
 <script src="$mapbb_libpath/lang/$mapbb_lang.js"></script>
 <style>
@@ -155,7 +150,7 @@ $proprietary
 <!--
 var mapBBcode = new MapBBCode({
 	windowPath: '$mapbb_libpath/',
-	layers: '{$forum_config['o_pun_mapbbcode_layers']}',
+	layers: "{$forum_config['o_pun_mapbbcode_layers']}",
 	defaultZoom: {$forum_config['o_pun_mapbbcode_default_zoom']},
 	defaultPosition: [{$forum_config['o_pun_mapbbcode_default_pos']}],
 	viewWidth: {$forum_config['o_pun_mapbbcode_view_width']},
@@ -291,7 +286,7 @@ MAPBBCODE;
 				);
 
 				$mapbb_libpath = $ext_info['url'].'/js';
-				$mapbb_lang = file_exists($ext_info['path'].'/js/lang/'.$forum_user['language'].'.Config.js') ? $forum_user['language'] : 'English';
+				$mapbb_lang = file_exists($ext_info['path'].'/js/lang/'.$lang_common['lang_identifier'].'.config.js') ? $lang_common['lang_identifier'] : 'en';
 				$proprietary = ($hook = get_hook('pun_mapbbcode_js_proprietary')) ? eval($hook) : '';
 
 				// todo: include mapbbcode-config etc
@@ -413,14 +408,10 @@ MAPBBCODE;
 				</div>
 
 <link rel="stylesheet" href="<?php echo $mapbb_libpath ?>/leaflet.css" />
-<!--[if lte IE 8]>
-	<link rel="stylesheet" href="<?php echo $mapbb_libpath ?>/leaflet.ie.css" />
-<![endif]-->
 <script src="<?php echo $mapbb_libpath ?>/leaflet.js"></script>
 <script src="<?php echo $mapbb_libpath ?>/mapbbcode-config.js"></script>
-<script src="<?php echo $mapbb_libpath ?>/proprietary/Bing.js"></script>
 <?php echo $proprietary ?>
-<script src="<?php echo $mapbb_libpath ?>/lang/<?php echo $mapbb_lang ?>.Config.js"></script>
+<script src="<?php echo $mapbb_libpath ?>/lang/<?php echo $mapbb_lang ?>.config.js"></script>
 
 <script language="javascript" type="text/javascript">
 <!--
@@ -440,7 +431,7 @@ function updateTableValues() {
 }
 
 var config = new MapBBCodeConfig({
-	layers: '<?php echo $forum_config['o_pun_mapbbcode_layers'] ?>'.split(','),
+	layers: "<?php echo $forum_config['o_pun_mapbbcode_layers'] ?>".split(','),
 	defaultZoom: <?php echo $forum_config['o_pun_mapbbcode_default_zoom'] ?>,
 	defaultPosition: [<?php echo $forum_config['o_pun_mapbbcode_default_pos'] ?>],
 	viewWidth: <?php echo $forum_config['o_pun_mapbbcode_view_width'] ?>,

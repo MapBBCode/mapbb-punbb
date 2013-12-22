@@ -28,7 +28,6 @@ mkdir $DIR/js
 cp -r $MAPBBCODE/* $DIR/js/
 rm -r $MAPBBCODE
 
-cp leaflet.css $DIR/js
 rm -f $TARGET
 zip -qr $TARGET $DIR
 rm -r $DIR

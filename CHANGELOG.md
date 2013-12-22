@@ -1,5 +1,10 @@
 # Changes to MapBBCode Extension
 
+### 1.2.0 (2013-12-22)
+
+# Update MapBBCode to 1.2.0.
+# Removed Bing from default layers, use the proprietary extension.
+
 ### 1.1.4 (2013-11-29)
 
 # Updated MapBBCode to 1.1.2.

@@ -4,7 +4,7 @@
 <extension engine="1.0">
 	<id>mapbbcode_proprietary</id>
 	<title>MapBBCode Add-ons</title>
-	<version>1.1.0</version>
+	<version>1.2.0</version>
 	<description>Add-ons and proprietary layers (e.g. Google Maps) for MapBBCode. Note: MapBBCode extension should be installed and mapbbcode-window.html in it should be writable!</description>
 	<author>Ilya Zverev</author>
 
@@ -19,7 +19,8 @@
 				$mapbb_libpath = '_';
 				// copy-paste from "pun_mapbbcode_js_proprietary" hook
 				$propr = '';
-				$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Esri.js"></script>';
+				$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Bing.js"></script>';
+				//$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Esri.js"></script>';
 				//$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Google.js"></script>';
 				//$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Yandex.js"></script>';
 				$propr .= '<script src="'.$mapbb_libpath.'/Handler.Length.js"></script>';
@@ -44,7 +45,8 @@
 	<hooks>
 		<hook id="pun_mapbbcode_js_proprietary"><![CDATA[
 			$propr = '';
-			$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Esri.js"></script>';
+			$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Bing.js"></script>';
+			//$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Esri.js"></script>';
 			//$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Google.js"></script>';
 			//$propr .= '<script src="'.$mapbb_libpath.'/proprietary/Yandex.js"></script>';
 			$propr .= '<script src="'.$mapbb_libpath.'/Handler.Length.js"></script>';
