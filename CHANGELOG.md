@@ -2,15 +2,15 @@
 
 ### 1.2.0 (2013-12-22)
 
-# Update MapBBCode to 1.2.0.
-# Removed Bing from default layers, use the proprietary extension.
+* Update MapBBCode to 1.2.0.
+* Removed Bing from default layers, use the proprietary extension.
 
 ### 1.1.4 (2013-11-29)
 
-# Updated MapBBCode to 1.1.2.
-# Fixed language regression.
-# Link to administrator's guide.
-# Proprietary plugin now updates mapbbcode-window.html.
+* Updated MapBBCode to 1.1.2.
+* Fixed language regression.
+* Link to administrator's guide.
+* Proprietary plugin now updates mapbbcode-window.html.
 
 ### 1.1.3 (2013-11-16)
 
